@@ -8,7 +8,7 @@ import glob, os, re
 import numpy as np
 import pandas as pd
 
-asset_files = sorted(glob.glob("*.SA.csv"))     #read all the raw LSEG exports in the current folder, which are the .csv files with the suffix .SA.csv
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "DATA")
 OUT_PRICES = "prices_brazil_clean.csv"
 OUT_RET = "logreturns_brazil.csv"
 
@@ -40,6 +40,7 @@ def read_one(path):
     return pd.Series(rows, name=ric).sort_index()               # oldest -> newest
 
 # ---- 1. Read and merge all assets (dates in rows, one column per asset)
+asset_files = sorted(glob.glob(os.path.join(DATA_DIR, "*.SA.csv")))
 prices = pd.concat([read_one(p) for p in asset_files], axis=1)
 prices.index.name = "Date"
 
@@ -52,7 +53,7 @@ print("Missing values per asset:\n", prices.isna().sum().to_string())
 prices = prices.dropna(how="all")
 
 # Load official bank holidays calendar
-holidays_df = pd.read_csv("brasilian_bankholidays_2016_2026.csv", sep=None, engine="python")
+holidays_df = pd.read_csv(os.path.join(DATA_DIR, "brasilian_bankholidays_2016_2026.csv"), sep=None, engine="python")
 official_holidays = pd.DatetimeIndex(pd.to_datetime(holidays_df.iloc[:, 0], errors="coerce").dropna())
 
 # Count and drop official holiday dates present in the sample
@@ -69,6 +70,8 @@ print("\nShare of zero returns per asset:\n", (rets == 0).mean().round(3).to_str
 print("Largest absolute daily log-return per asset (check splits):\n",
       rets.abs().max().round(3).to_string())
 
-prices.to_csv(OUT_PRICES, date_format="%Y-%m-%d")
-rets.to_csv(OUT_RET, date_format="%Y-%m-%d")
+
+#if you remove the comments from the following lines, the code will save and update the cleaned prices and log returns to CSV files
+#prices.to_csv(OUT_PRICES, date_format="%Y-%m-%d")
+#rets.to_csv(OUT_RET, date_format="%Y-%m-%d")
 print("\nFinal:", prices.shape, prices.index.min().date(), "->", prices.index.max().date())
