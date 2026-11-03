@@ -1,0 +1,6 @@
+Case,Total violations,Expected,Series rejected by Kupiec (5%),Series rejected by cond. coverage (5%),Avg VaR (%),Avg check loss (x100)
+case1,47,39.84,1,1,4.202,0.05986
+case2,36,39.84,1,0,4.641,0.06065
+case3,35,39.84,1,0,4.606,0.0604
+case4,35,39.84,1,0,4.732,0.06067
+case5,34,39.84,1,0,4.662,0.06038

@@ -1,0 +1,5 @@
+Case,Asset,Violations,Mean ES (%),Mean VaR (%),ES/VaR,Mean realised loss on violation days (%),Mean predicted ES on those days (%),Days with loss > ES,McNeil-Frey mean,McNeil-Frey p (one-sided)
+case1,PETR4,2,5.098,4.431,1.151,4.433,4.104,1,,
+case1,PORT,5,3.109,2.703,1.15,3.415,3.243,3,0.1969,0.1891
+case5,PETR4,1,8.103,5.509,1.471,5.297,6.709,0,,
+case5,PORT,3,3.941,3.114,1.266,3.36,3.645,1,-0.2287,0.8092

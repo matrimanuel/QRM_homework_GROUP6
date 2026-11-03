@@ -1,0 +1,8 @@
+,Reject H0 at 5%,Out of
+LB r p(lag10),15,15
+LB |r| p(lag10),15,15
+LB r2 p(lag10),15,15
+LB r p(lag20),14,15
+LB |r| p(lag20),15,15
+LB r2 p(lag20),15,15
+ARCH-LM p(10),15,15

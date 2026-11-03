@@ -1,0 +1,3 @@
+Case,Avg VaR (%),Avg ES (%),Avg ES/VaR,Total violations,Mean loss on viol. days (%),Mean ES on viol. days (%)
+case1,4.202,4.828,1.149,47,5.529,4.604
+case5,4.662,6.238,1.332,34,5.987,5.875
