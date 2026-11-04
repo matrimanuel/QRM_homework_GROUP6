@@ -218,3 +218,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# File ausiliari generati da LaTeX (da escludere assolutamente)
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.log
+
+# File di output finale (consigliato escluderlo)
+*.pdf
+
