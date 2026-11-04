@@ -1,0 +1,63 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{Homework 1 - Analysis of Brazilian Assets}
+\author{Maxime Aurelien Arnoux, Dimitrios Topanelis, Manuel Tonini, Alessandro Buson}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+We chose to analyze 15 Brazilian assets, taken from the Bovespa index, with different market capitalizations and different sectors.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{|l|l|r|l|}
+\hline
+\textbf{Asset} & \textbf{Ticker} & \textbf{Mkt Cap (USD bn)} & \textbf{Sector / Industry} \\
+\hline
+Petrobras           & PETR4.SA & 136.4 & Energy / Oil \& Gas Integrated \\
+Ita\'u Unibanco     & ITUB4.SA &  79.0 & Financial Services / Banks \\
+Vale                & VALE3.SA &  48.3 & Basic Materials / Metals \& Mining \\
+Ambev               & ABEV3.SA &  41.5 & Consumer Defensive / Brewers \\
+WEG                 & WEGE3.SA &  40.0 & Industrials / Electrical Equipment \\
+Banco Bradesco      & BBDC4.SA &  28.6 & Financial Services / Banks \\
+Banco do Brasil     & BBAS3.SA &  18.7 & Financial Services / Banks \\
+Telef\^onica Brasil & VIVT3.SA &  17.9 & Communication Services / Telecom \\
+Sabesp              & SBSP3.SA &  15.9 & Utilities / Regulated Water \\
+Embraer             & EMBJ3.SA &  13.4 & Industrials / Aerospace \& Defense \\
+Eneva               & ENEV3.SA &   9.5 & Utilities / Diversified \\
+Gerdau              & GGBR4.SA &   9.1 & Basic Materials / Steel \\
+Equatorial          & EQTL3.SA &   8.1 & Utilities / Regulated Electric \\
+Copel               & CPLE3.SA &   7.7 & Utilities / Regulated Electric \\
+Localiza            & RENT3.SA &   6.2 & Industrials / Rental \& Leasing \\
+\hline
+\end{tabular}
+\caption{Selected assets. Market capitalization of November 2026.}
+\label{tab:asset}
+\end{table}
+We concentrated more on Energy and utility companies, as they are more sensitive to the Brazilian macroeconomic environment, and due to the recent energy crisis that characterised these years. We also included some banks and industrials to diversify the sample.
+
+\section{Q1 - Data}
+Reference: DATA folder, \texttt{01\_clean\_data.py}, \texttt{logreturns\_brazil.csv}, \texttt{prices\_brazil\_clean.csv}.
+We collected the data of the 15 assets from the LSEG portal,
+
+\section{Results}
+Numerical analysis and outcomes.
+
+\section{Conclusion}
+Final remarks.
+
+\end{document}

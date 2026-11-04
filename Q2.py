@@ -1,5 +1,5 @@
 # ==============================================================
-# 02_descriptive.py  -  QRM Homework 1, Group 6 (Brazil)
+# Q2.py Group 6 (Brazil)
 # Question 2: descriptive analysis of the log-returns (full sample)
 # Input : logreturns_brazil.csv   (produced by 01_clean_data.py)
 # Output: folder outputs_q2/ with all tables (CSV) and figures (PNG)
@@ -105,6 +105,7 @@ print("\nTABLE 4 - p-values (number of assets rejecting 'no serial dependence' a
 sns.set_style("whitegrid")
 
 # FIG 1: return series of four representative assets (volatility clustering)
+#the asset selected are the more capitalized ones and are all in different sectors, to have a more representative sample of the market
 sel = [c for c in ["PETR4", "VALE3", "ITUB4", "WEGE3"] if c in rets]
 fig, ax = plt.subplots(len(sel), 1, figsize=(11, 8), sharex=True)
 for a, c in zip(ax, sel):
